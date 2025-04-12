@@ -1,7 +1,13 @@
-name: welcome workflow
+name: Post welcome comment
 on: 
   pull_request:
     types:
       - opened
 permissions:
+  # Gives permissions to write to pull requests
   pull-requests: write
+
+jobs:
+  build:
+    name: Post welcome comment
+    runs-on: ubuntu-latest
